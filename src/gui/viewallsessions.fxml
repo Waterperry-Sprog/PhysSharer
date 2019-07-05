@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewAllSessionsController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="View All Sessions" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+      <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" GridPane.rowSpan="2147483647">
+        <columns>
+          <TableColumn fx:id="durationCol" prefWidth="75.0" text="Duration" />
+          <TableColumn fx:id="intensityCol" prefWidth="93.0" text="Intensity" />
+            <TableColumn fx:id="typeCol" prefWidth="57.0" text="Type" />
+            <TableColumn fx:id="authorCol" prefWidth="140.0" text="Author" />
+            <TableColumn fx:id="descriptionCol" prefWidth="234.0" text="Description" />
+        </columns>
+      </TableView>
+      <Button mnemonicParsing="false" onAction="#updateTable" text="Populate" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <Text onMouseClicked="#switchBack" strokeType="OUTSIDE" strokeWidth="0.0" text="     &lt;--" GridPane.halignment="LEFT" />
+   </children>
+</GridPane>
